@@ -51,12 +51,12 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
                     
                     <div className="text-center md:text-left space-y-2">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">
-                            Administrator
+                            Administrator EkoHajj
                         </div>
-                        <h1 className="text-2xl md:text-4xl font-bold font-playfair">Direktur Jenderal</h1>
+                        <h1 className="text-2xl md:text-4xl font-bold font-playfair">Admin</h1>
                         <p className="text-emerald-100/80 text-sm md:text-base max-w-md">
-                            Pengembangan Ekosistem Haji dan Umrah
-                            <br/>Kementerian Agama Republik Indonesia
+                            Pengembangan Ekosistem Ekonomi Haji dan Umrah
+                            <br/>Kementerian Haji dan Umrah Republik Indonesia
                         </p>
                     </div>
 

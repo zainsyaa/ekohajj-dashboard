@@ -84,8 +84,9 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onNavigat
             
             <div className="flex items-center gap-3 pl-3 md:pl-4 border-l border-gray-200/60">
                 <div className="text-right hidden md:block">
-                    <p className="text-sm font-bold text-gray-800">Direktur Jenderal</p>
-                    <p className="text-[10px] text-[#D4AF37] font-bold tracking-wider uppercase">Pengembangan Ekosistem</p>
+                    <p className="text-sm font-bold text-gray-800">Admin</p>
+                    <p className="text-[10px] text-[#D4AF37] font-bold tracking-wider uppercase">Administrator EkoHajj</p>
+                    <p className="text-[8px] text-gray-400 leading-tight max-w-[250px] mt-0.5">Pengembangan Ekosistem Ekonomi Haji dan Umrah Kementerian Haji dan Umrah Republik Indonesia</p>
                 </div>
                 <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-gradient-to-br from-[#064E3B] to-[#042f24] p-0.5 shadow-lg shadow-[#064E3B]/20 cursor-pointer hover:scale-105 transition-transform">
                     <div className="w-full h-full rounded-full border-2 border-white/20 flex items-center justify-center">
