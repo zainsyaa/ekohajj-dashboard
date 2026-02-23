@@ -181,7 +181,6 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
                         ) : (
                              <>
                                 <span>MASUK DASHBOARD</span>
-                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                              </>
                         )}
                     </button>
