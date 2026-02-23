@@ -359,12 +359,18 @@ const Toggle = ({ checked, onChange }: { checked: boolean; onChange: (val: boole
 const LanguageToggle = ({ isEnglish, onChange }: { isEnglish: boolean; onChange: (val: boolean) => void }) => (
     <button 
         onClick={() => onChange(!isEnglish)}
-        className="relative w-16 h-8 bg-gray-100 rounded-full p-1 flex items-center shadow-inner border border-gray-200 hover:border-gray-300 transition-colors"
+        className="relative w-20 h-9 bg-gray-100/80 backdrop-blur-sm rounded-lg p-1 flex items-center shadow-inner border border-gray-200 hover:border-gray-300 transition-all cursor-pointer group"
     >
         <div 
-            className={`absolute top-1 left-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-white rounded-full shadow-sm transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isEnglish ? 'translate-x-[calc(100%+8px)]' : 'translate-x-0'}`}
+            className={`absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-md shadow-sm border border-gray-100 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isEnglish ? 'left-[calc(50%+2px)]' : 'left-1'}`}
         ></div>
-        <span className={`flex-1 text-[10px] font-bold z-10 transition-colors duration-300 text-center ${!isEnglish ? 'text-[#064E3B]' : 'text-gray-400'}`}>ID</span>
-        <span className={`flex-1 text-[10px] font-bold z-10 transition-colors duration-300 text-center ${isEnglish ? 'text-[#064E3B]' : 'text-gray-400'}`}>EN</span>
+        
+        <div className={`flex-1 flex items-center justify-center z-10 transition-all duration-300 ${!isEnglish ? 'opacity-100 scale-105' : 'opacity-50 scale-95'}`}>
+            <span className={`text-xs font-bold ${!isEnglish ? 'text-[#064E3B]' : 'text-gray-400'}`}>ID</span>
+        </div>
+        
+        <div className={`flex-1 flex items-center justify-center z-10 transition-all duration-300 ${isEnglish ? 'opacity-100 scale-105' : 'opacity-50 scale-95'}`}>
+            <span className={`text-xs font-bold ${isEnglish ? 'text-[#064E3B]' : 'text-gray-400'}`}>EN</span>
+        </div>
     </button>
 );
