@@ -61,8 +61,9 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
                     <div className="mb-6 transform hover:scale-105 transition-transform duration-500 flex justify-center">
                         <Logo size="lg" />
                     </div>
-                    <h1 className="text-sm md:text-base font-light text-[#064E3B] tracking-wide leading-relaxed mb-8 max-w-md mx-auto">
-                        Pengembangan Ekosistem Ekonomi Haji dan Umrah, Kementerian Haji dan Umrah Republik Indonesia
+                    <h1 className="text-[#064E3B] tracking-wide leading-relaxed mb-8 max-w-md mx-auto">
+                        <span className="block font-bold text-lg md:text-xl mb-1">Akses Terbatas</span>
+                        <span className="block text-sm md:text-base font-light opacity-90">Khusus pengguna terotorisasi</span>
                     </h1>
                     <div className="w-16 h-1 bg-[#D4AF37] mx-auto rounded-full mb-8 opacity-80"></div>
                     <p className="text-gray-600 italic max-w-xs mx-auto leading-relaxed font-serif text-base lg:text-lg mb-10">
