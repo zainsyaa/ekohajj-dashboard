@@ -292,37 +292,68 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
                     </div>
                 </GlassCard>
 
-                {/* Support */}
+                {/* Manajemen Akun */}
                 <GlassCard 
-                    title="Bantuan & Dukungan" 
-                    subtitle="Pusat Bantuan & Dokumentasi"
-                    action={<div className="p-2 bg-orange-50 rounded-lg text-orange-700 shadow-sm"><HelpCircle size={18}/></div>}
+                    title="Manajemen Akun" 
+                    subtitle="Daftar Pengguna Terdaftar"
+                    action={<div className="p-2 bg-emerald-50 rounded-lg text-emerald-700 shadow-sm"><User size={18}/></div>}
                     className="h-full md:col-span-2 !bg-white/80"
                 >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <a href="#" className="flex items-center gap-4 p-5 rounded-xl border border-gray-100 bg-white/50 hover:bg-white hover:border-orange-200 hover:shadow-md transition-all duration-300 group relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-full -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
-                            <div className="p-3 bg-orange-50 text-orange-600 rounded-2xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-sm relative z-10">
-                                <Mail size={24} />
-                            </div>
-                            <div className="relative z-10">
-                                <h4 className="text-base font-bold text-gray-800 group-hover:text-orange-700 transition-colors">Hubungi Tim IT</h4>
-                                <p className="text-xs text-gray-500 mt-0.5">support@ekohajj.kemenag.go.id</p>
-                            </div>
-                            <ChevronRight size={18} className="ml-auto text-gray-300 group-hover:text-orange-400 transition-colors relative z-10" />
-                        </a>
-                        
-                        <a href="#" className="flex items-center gap-4 p-5 rounded-xl border border-gray-100 bg-white/50 hover:bg-white hover:border-teal-200 hover:shadow-md transition-all duration-300 group relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-teal-50 rounded-full -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
-                            <div className="p-3 bg-teal-50 text-teal-600 rounded-2xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 shadow-sm relative z-10">
-                                <HelpCircle size={24} />
-                            </div>
-                            <div className="relative z-10">
-                                <h4 className="text-base font-bold text-gray-800 group-hover:text-teal-700 transition-colors">Panduan Pengguna</h4>
-                                <p className="text-xs text-gray-500 mt-0.5">Dokumentasi lengkap modul</p>
-                            </div>
-                            <ChevronRight size={18} className="ml-auto text-gray-300 group-hover:text-teal-400 transition-colors relative z-10" />
-                        </a>
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="border-b border-gray-100">
+                                    <th className="py-3 px-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Pengguna</th>
+                                    <th className="py-3 px-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Role</th>
+                                    <th className="py-3 px-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th className="py-3 px-4 text-xs font-bold text-gray-500 uppercase tracking-wider text-right">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-50">
+                                {[
+                                    { id: '001', name: 'Admin Utama', role: 'Administrator', status: 'Active', email: 'admin@ekohajj.kemenag.go.id', avatar: 'https://ui-avatars.com/api/?name=Admin+Utama&background=064E3B&color=fff' },
+                                    { id: '002', name: 'Budi Santoso', role: 'Petugas Lapangan', status: 'Active', email: 'budi.s@ekohajj.kemenag.go.id', avatar: 'https://ui-avatars.com/api/?name=Budi+Santoso&background=random' },
+                                    { id: '003', name: 'Siti Aminah', role: 'Verifikator', status: 'Inactive', email: 'siti.a@ekohajj.kemenag.go.id', avatar: 'https://ui-avatars.com/api/?name=Siti+Aminah&background=random' },
+                                ].map((user) => (
+                                    <tr key={user.id} className="group hover:bg-gray-50/50 transition-colors">
+                                        <td className="py-3 px-4">
+                                            <div className="flex items-center gap-3">
+                                                <img src={user.avatar} alt={user.name} className="w-8 h-8 rounded-full shadow-sm" />
+                                                <div>
+                                                    <p className="text-sm font-bold text-gray-800">{user.name}</p>
+                                                    <p className="text-[10px] text-gray-500">{user.email}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="py-3 px-4">
+                                            <span className="px-2 py-1 rounded-md bg-gray-100 text-gray-600 text-[10px] font-bold uppercase tracking-wide border border-gray-200">
+                                                {user.role}
+                                            </span>
+                                        </td>
+                                        <td className="py-3 px-4">
+                                            <span className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide border ${
+                                                user.status === 'Active' 
+                                                    ? 'bg-emerald-50 text-emerald-700 border-emerald-100' 
+                                                    : 'bg-gray-50 text-gray-500 border-gray-200'
+                                            }`}>
+                                                <span className={`w-1.5 h-1.5 rounded-full ${user.status === 'Active' ? 'bg-emerald-500 animate-pulse' : 'bg-gray-400'}`}></span>
+                                                {user.status}
+                                            </span>
+                                        </td>
+                                        <td className="py-3 px-4 text-right">
+                                            <button className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all" title="Edit User">
+                                                <SettingsIconLucide size={14} />
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="mt-4 pt-3 border-t border-gray-100 flex justify-center">
+                        <button className="text-xs font-bold text-emerald-600 hover:text-emerald-700 hover:underline transition-all flex items-center gap-1">
+                            Lihat Semua Pengguna <ChevronRight size={12} />
+                        </button>
                     </div>
                 </GlassCard>
             </div>
