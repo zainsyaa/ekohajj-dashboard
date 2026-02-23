@@ -59,7 +59,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
                  
                  <div className="relative z-10 text-center">
                     <div className="mb-6 transform hover:scale-105 transition-transform duration-500 flex justify-center">
-                        <Logo size="lg" />
+                        <Logo size="xl" />
                     </div>
                     <h1 className="text-[#064E3B] tracking-wide leading-relaxed mb-8 max-w-md mx-auto">
                         <span className="block font-bold text-lg md:text-xl mb-1">Akses Terbatas</span>
@@ -97,7 +97,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
                 {/* Mobile Header (Visible only on mobile) */}
                 <div className="md:hidden flex flex-col items-center justify-center mb-6 text-center">
                     <div className="mb-4">
-                        <Logo size="md" />
+                        <Logo size="lg" />
                     </div>
                     <h1 className="text-xl font-bold text-[#064E3B] font-playfair leading-none mb-1">
                         Dirjen <span className="text-[#D4AF37]">PEE</span>
