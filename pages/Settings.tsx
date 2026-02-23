@@ -44,29 +44,30 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
             {/* Hero Section - User Profile */}
             <HeroSection 
                 title={
-                    <div className="flex items-center gap-5">
-                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] border-white/30 bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center backdrop-blur-md shadow-lg flex-shrink-0">
-                            <User className="text-white w-10 h-10 md:w-12 md:h-12 drop-shadow-md" />
-                        </div>
-                        <div className="flex flex-col justify-center text-left">
-                            <span className="text-2xl md:text-4xl font-bold font-playfair leading-none tracking-tight">
-                                Admin
-                            </span>
-                            <span className="text-[10px] md:text-xs text-[#D4AF37] font-bold tracking-widest uppercase mt-1">
-                                Administrator EkoHajj
-                            </span>
-                            <span className="text-sm md:text-base text-emerald-50/80 font-light tracking-wide mt-1 leading-relaxed max-w-2xl">
-                                Pengembangan Ekosistem Ekonomi Haji dan Umrah<br/>
-                                Kementerian Haji dan Umrah Republik Indonesia
-                            </span>
+                    <div className="flex items-center gap-3 flex-wrap">
+                        <span>Admin</span>
+                        <div className="hidden sm:block h-8 w-px bg-white/20 mx-1"></div>
+                        <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-lg border border-white/10 backdrop-blur-sm shadow-inner">
+                            <span className="text-[10px] uppercase tracking-wider text-emerald-200 font-bold">ID</span>
+                            <span className="font-mono text-lg md:text-xl tracking-widest text-white/90 font-bold">0000000</span>
                         </div>
                     </div>
                 }
-                subtitle=""
+                subtitle="Pengembangan Ekosistem Ekonomi Haji dan Umrah Kementerian Haji dan Umrah Republik Indonesia"
                 currentDate={currentDate}
+                role="Administrator EkoHajj"
+                startContent={
+                    <div className="relative group">
+                        <div className="absolute inset-0 bg-white/20 rounded-full blur-md group-hover:blur-lg transition-all opacity-40"></div>
+                        <div className="w-16 h-16 md:w-22 md:h-22 rounded-full border-[3px] border-white/30 bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center backdrop-blur-md shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300">
+                            <User className="text-white w-8 h-8 md:w-10 md:h-10 drop-shadow-md" />
+                        </div>
+                    </div>
+                }
             >
-                <button className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs md:text-sm font-medium transition-all text-white whitespace-nowrap shadow-sm hover:shadow-md active:scale-95 flex items-center gap-2">
-                    Edit Profil
+                <button className="px-5 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs md:text-sm font-bold transition-all text-white whitespace-nowrap shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2 group">
+                    <span>Edit Profil</span>
+                    <SettingsIconLucide size={16} className="group-hover:rotate-90 transition-transform duration-500" />
                 </button>
             </HeroSection>
 
