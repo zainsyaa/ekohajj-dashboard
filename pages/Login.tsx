@@ -199,6 +199,13 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
         </div>
 
       </div>
+      
+      {/* Copyright Footer */}
+      <div className="absolute bottom-4 left-0 right-0 text-center z-10">
+          <p className="text-white/60 text-[10px] md:text-xs font-medium tracking-wide">
+              &copy; 2026 Kementerian Haji dan Umrah RI. Hak Cipta Dilindungi.
+          </p>
+      </div>
     </div>
   );
 };
