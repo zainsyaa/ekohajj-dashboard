@@ -59,8 +59,12 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
                 startContent={
                     <div className="relative group">
                         <div className="absolute inset-0 bg-white/20 rounded-full blur-md group-hover:blur-lg transition-all opacity-40"></div>
-                        <div className="w-16 h-16 md:w-22 md:h-22 rounded-full border-[3px] border-white/30 bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center backdrop-blur-md shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300">
-                            <User className="text-white w-8 h-8 md:w-10 md:h-10 drop-shadow-md" />
+                        <div className="w-16 h-16 md:w-22 md:h-22 rounded-full border-[3px] border-white/30 bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center backdrop-blur-md shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                            <img 
+                                src="https://placehold.co/400x400/064E3B/D4AF37?text=EkoHajj+2026" 
+                                alt="Admin Profile" 
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
                 }

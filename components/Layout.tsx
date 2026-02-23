@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Sidebar } from './Sidebar';
-import { User, Bell, AlignLeft } from 'lucide-react';
+import { Bell, AlignLeft } from 'lucide-react';
 import { Page } from '../types';
 import { LayoutProvider } from '../contexts/LayoutContext';
 import { Logo } from './Logo';
@@ -88,8 +88,12 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onNavigat
                     <p className="text-[10px] text-[#D4AF37] font-bold tracking-wider uppercase leading-tight">Administrator EkoHajj</p>
                 </div>
                 <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-gradient-to-br from-[#064E3B] to-[#042f24] p-0.5 shadow-lg shadow-[#064E3B]/20 cursor-pointer hover:scale-105 transition-transform">
-                    <div className="w-full h-full rounded-full border-2 border-white/20 flex items-center justify-center">
-                        <User size={18} className="text-white md:w-5 md:h-5" />
+                    <div className="w-full h-full rounded-full border-2 border-white/20 overflow-hidden">
+                        <img 
+                            src="https://placehold.co/400x400/064E3B/D4AF37?text=EkoHajj+2026" 
+                            alt="Admin Profile" 
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
             </div>
