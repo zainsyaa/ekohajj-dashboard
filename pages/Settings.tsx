@@ -44,19 +44,18 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
             {/* Hero Section - User Profile */}
             <HeroSection 
                 title={
-                    <div className="flex items-center gap-5 md:gap-8">
-                        <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-[3px] border-white/30 bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center backdrop-blur-md shadow-2xl flex-shrink-0">
-                            <User className="text-white w-10 h-10 md:w-14 md:h-14 drop-shadow-md" />
+                    <div className="flex items-center gap-5">
+                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] border-white/30 bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center backdrop-blur-md shadow-lg flex-shrink-0">
+                            <User className="text-white w-10 h-10 md:w-12 md:h-12 drop-shadow-md" />
                         </div>
                         <div className="flex flex-col justify-center text-left">
-                            <span className="text-3xl md:text-5xl font-bold font-playfair leading-tight tracking-tight">
+                            <span className="text-2xl md:text-4xl font-bold font-playfair leading-none tracking-tight">
                                 Admin
                             </span>
-                            <span className="text-xs md:text-sm text-[#D4AF37] font-bold tracking-widest uppercase mt-1 md:mt-2">
+                            <span className="text-[10px] md:text-xs text-[#D4AF37] font-bold tracking-widest uppercase mt-1">
                                 Administrator EkoHajj
                             </span>
-                            <div className="h-px w-12 bg-white/20 my-2 md:my-3"></div>
-                            <span className="text-[10px] md:text-xs text-emerald-50/90 font-light tracking-wide leading-relaxed max-w-lg">
+                            <span className="text-sm md:text-base text-emerald-50/80 font-light tracking-wide mt-1 leading-relaxed max-w-2xl">
                                 Pengembangan Ekosistem Ekonomi Haji dan Umrah<br/>
                                 Kementerian Haji dan Umrah Republik Indonesia
                             </span>
@@ -66,7 +65,7 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
                 subtitle=""
                 currentDate={currentDate}
             >
-                <button className="px-5 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-sm font-medium transition-all text-white whitespace-nowrap shadow-sm hover:shadow-md active:scale-95 flex items-center gap-2">
+                <button className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs md:text-sm font-medium transition-all text-white whitespace-nowrap shadow-sm hover:shadow-md active:scale-95 flex items-center gap-2">
                     Edit Profil
                 </button>
             </HeroSection>
