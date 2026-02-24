@@ -577,19 +577,19 @@ export const Reports: React.FC = () => {
         >
              <div className="flex flex-row items-center gap-2 w-full sm:w-auto overflow-x-auto no-scrollbar">
                  <div className="flex items-center gap-2 flex-shrink-0">
-                     <button className="flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-[10px] font-bold text-white hover:bg-white/20 transition-all shadow-lg group whitespace-nowrap">
-                         <Printer size={14} className="text-emerald-200 group-hover:text-white transition-colors" /> <span className="hidden sm:inline">Print Laporan</span><span className="sm:hidden">Print</span>
+                     <button className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-xs md:text-sm font-bold text-white hover:bg-white/20 transition-all shadow-lg group whitespace-nowrap">
+                         <Printer size={16} className="text-emerald-200 group-hover:text-white transition-colors" /> <span className="hidden sm:inline">Print Laporan</span><span className="sm:hidden">Print</span>
                      </button>
-                     <button className="flex items-center gap-2 px-3 py-2 bg-[#D4AF37] text-[#064E3B] rounded-xl text-[10px] font-bold hover:bg-[#b08d24] hover:text-white shadow-lg shadow-[#D4AF37]/20 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
-                         <Download size={14} /> <span className="hidden sm:inline">Export CSV</span><span className="sm:hidden">CSV</span>
+                     <button className="flex items-center gap-2 px-5 py-2.5 bg-[#D4AF37] text-[#064E3B] rounded-xl text-xs md:text-sm font-bold hover:bg-[#b08d24] hover:text-white shadow-lg shadow-[#D4AF37]/20 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+                         <Download size={16} /> <span className="hidden sm:inline">Export CSV</span><span className="sm:hidden">CSV</span>
                      </button>
                  </div>
 
                  {/* Status Badge */}
-                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/10 h-full min-h-[38px] flex-shrink-0 ml-auto sm:ml-0">
+                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-xl border border-white/10 h-full min-h-[44px] flex-shrink-0 ml-auto sm:ml-0">
                     <div className="text-right">
-                        <p className="text-[8px] text-emerald-100 uppercase tracking-wide hidden sm:block">Status Data</p>
-                        <p className="text-[10px] font-bold text-white leading-none">Live<span className="hidden sm:inline"> Monitoring</span></p>
+                        <p className="text-[10px] text-emerald-100 uppercase tracking-wide hidden sm:block">Status Data</p>
+                        <p className="text-xs md:text-sm font-bold text-white leading-none">Live<span className="hidden sm:inline"> Monitoring</span></p>
                     </div>
                     <div className="relative w-2 h-2 flex items-center justify-center">
                         <span className="absolute inset-0 rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
