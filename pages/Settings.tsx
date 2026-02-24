@@ -311,7 +311,7 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
                             </thead>
                             <tbody className="divide-y divide-gray-50">
                                 {[
-                                    { id: '001', name: 'Admin Utama', role: 'Administrator', status: 'Active', email: 'admin@ekohajj.kemenag.go.id', avatar: 'https://ui-avatars.com/api/?name=Admin+Utama&background=064E3B&color=fff' },
+                                    { id: '0000000', name: 'Admin', role: 'Administrator EkoHajj', status: 'Active', email: 'admin@ekohajj.kemenag.go.id', avatar: 'https://placehold.co/400x400/064E3B/D4AF37?text=EkoHajj+2026' },
                                     { id: '002', name: 'Budi Santoso', role: 'Petugas Lapangan', status: 'Active', email: 'budi.s@ekohajj.kemenag.go.id', avatar: 'https://ui-avatars.com/api/?name=Budi+Santoso&background=random' },
                                     { id: '003', name: 'Siti Aminah', role: 'Verifikator', status: 'Inactive', email: 'siti.a@ekohajj.kemenag.go.id', avatar: 'https://ui-avatars.com/api/?name=Siti+Aminah&background=random' },
                                 ].map((user) => (
