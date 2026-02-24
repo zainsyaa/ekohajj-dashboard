@@ -181,7 +181,7 @@ export const Settings: React.FC<SettingsProps> = ({ onNavigate, onLogout }) => {
             >
                 <button 
                     onClick={handleEditProfile}
-                    className="px-5 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs md:text-sm font-bold transition-all text-white whitespace-nowrap shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2 group"
+                    className="px-5 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs md:text-sm font-bold transition-all text-white hover:text-[#D4AF37] whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 flex items-center gap-2 group"
                 >
                     <span>Edit Profil</span>
                     <SettingsIconLucide size={16} className="group-hover:rotate-90 transition-transform duration-500" />
